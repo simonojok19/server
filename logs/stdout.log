@@ -1,0 +1,111 @@
+2020-09-14 12:39:21,852 WARN  [com.tendcent.face.sdk.TdxSdkBootstrap] - sdk开始启动...
+12:39:22.066 [single-pool-1-thread-0] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+12:39:22.077 [single-pool-1-thread-0] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 8
+12:39:22.118 [single-pool-1-thread-0] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+12:39:22.118 [single-pool-1-thread-0] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+12:39:22.151 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+12:39:22.152 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 11
+12:39:22.155 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+12:39:22.156 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+12:39:22.157 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+12:39:22.161 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:224)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:218)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:212)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:80)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:269)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.<init>(SingleThreadEventExecutor.java:165)
+	at io.netty.channel.SingleThreadEventLoop.<init>(SingleThreadEventLoop.java:58)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:135)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:127)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:36)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:47)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:59)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:77)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:59)
+	at com.tendcent.face.sdk.server.GwServer.start(SourceFile:86)
+	at com.tendcent.face.sdk.TdxSdkBootstrap.start(SourceFile:35)
+	at com.tendcent.face.sdk.server.TdxFaceSdkServerApplication.lambda$main$0(TdxFaceSdkServerApplication.java:14)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+	at com.tendcent.face.sdk.common.ThreadUtils$a$1.run(SourceFile:189)
+12:39:22.162 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+12:39:22.164 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @51d33ef7
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:334)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:325)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:212)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:80)
+	at io.netty.channel.nio.NioEventLoop.newTaskQueue(NioEventLoop.java:269)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.<init>(SingleThreadEventExecutor.java:165)
+	at io.netty.channel.SingleThreadEventLoop.<init>(SingleThreadEventLoop.java:58)
+	at io.netty.channel.nio.NioEventLoop.<init>(NioEventLoop.java:135)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:127)
+	at io.netty.channel.nio.NioEventLoopGroup.newChild(NioEventLoopGroup.java:36)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:84)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:58)
+	at io.netty.util.concurrent.MultithreadEventExecutorGroup.<init>(MultithreadEventExecutorGroup.java:47)
+	at io.netty.channel.MultithreadEventLoopGroup.<init>(MultithreadEventLoopGroup.java:59)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:77)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:72)
+	at io.netty.channel.nio.NioEventLoopGroup.<init>(NioEventLoopGroup.java:59)
+	at com.tendcent.face.sdk.server.GwServer.start(SourceFile:86)
+	at com.tendcent.face.sdk.TdxSdkBootstrap.start(SourceFile:35)
+	at com.tendcent.face.sdk.server.TdxFaceSdkServerApplication.lambda$main$0(TdxFaceSdkServerApplication.java:14)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+	at com.tendcent.face.sdk.common.ThreadUtils$a$1.run(SourceFile:189)
+12:39:22.165 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+12:39:22.165 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+12:39:22.208 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 1073741824 bytes (maybe)
+12:39:22.209 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+12:39:22.209 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+12:39:22.212 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+12:39:22.213 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+12:39:22.215 [single-pool-1-thread-0] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+12:39:22.215 [single-pool-1-thread-0] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+2020-09-14 12:39:22,525 WARN  [com.tendcent.face.sdk.TdxSdkBootstrap] - sdk网关启动成功,端口号10010!takes 675 ms.
+2020-09-14 12:39:22,546 INFO  [tendcent.face.sdk.server.GwServer] - GwServer 启动成功, 端口号:10010
+2020-09-14 12:39:22,562 WARN  [com.tendcent.face.sdk.TdxSdkBootstrap] - sdk服务启动成功,端口号10011!takes 712 ms.
+2020-09-14 12:39:22,562 WARN  [com.tendcent.face.sdk.TdxSdkBootstrap] - sdk启动完成...
+2020-09-14 12:39:22,564 INFO  [tendcent.face.sdk.server.SdkServer] - SdkServer 启动成功, 端口号:10011
+12:39:23.468 [main] INFO  c.t.f.s.s.TdxFaceSdkServerApplication - Starting TdxFaceSdkServerApplication v1.1.5 on dev-dynabook with PID 3623 (/home/dev/Documents/copied/face-sdk-server_v1.1.5/tdx-face-sdk-server_release.jar started by dev in /home/dev/Documents/copied/face-sdk-server_v1.1.5)
+12:39:23.470 [main] DEBUG c.t.f.s.s.TdxFaceSdkServerApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+12:39:23.471 [main] INFO  c.t.f.s.s.TdxFaceSdkServerApplication - No active profile set, falling back to default profiles: default
+12:39:25.770 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8190 (http)
+12:39:25.827 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:39:25.830 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+12:39:25.849 [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+12:39:25.974 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:39:25.974 [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2388 ms
+12:39:26.546 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+12:39:26.936 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8190 (http) with context path ''
+12:39:26.943 [main] INFO  c.t.f.s.s.TdxFaceSdkServerApplication - Started TdxFaceSdkServerApplication in 4.802 seconds (JVM running for 5.498)
+12:40:04.130 [GW-SERVER-BOSS-0] INFO  i.n.handler.logging.LoggingHandler - [id: 0xdadf2c04, L:/0:0:0:0:0:0:0:0:10010] READ: [id: 0x59df0759, L:/0:0:0:0:0:0:0:1:10010 - R:/0:0:0:0:0:0:0:1:48388]
+12:40:04.132 [GW-SERVER-BOSS-0] INFO  i.n.handler.logging.LoggingHandler - [id: 0xdadf2c04, L:/0:0:0:0:0:0:0:0:10010] READ COMPLETE
+12:40:04.134 [GW-SERVER-BOSS-0] INFO  i.n.handler.logging.LoggingHandler - [id: 0xdadf2c04, L:/0:0:0:0:0:0:0:0:10010] READ: [id: 0xd51db141, L:/0:0:0:0:0:0:0:1:10010 - R:/0:0:0:0:0:0:0:1:48390]
+12:40:04.144 [GW-SERVER-BOSS-0] INFO  i.n.handler.logging.LoggingHandler - [id: 0xdadf2c04, L:/0:0:0:0:0:0:0:0:10010] READ COMPLETE
+12:41:04.282 [SDK-SERVER-BOSS-0] INFO  i.n.handler.logging.LoggingHandler - [id: 0x0c369f4c, L:/0:0:0:0:0:0:0:0:10011] READ: [id: 0x0e5cce03, L:/0:0:0:0:0:0:0:1:10011 - R:/0:0:0:0:0:0:0:1:55740]
+12:41:04.295 [SDK-SERVER-BOSS-0] INFO  i.n.handler.logging.LoggingHandler - [id: 0x0c369f4c, L:/0:0:0:0:0:0:0:0:10011] READ COMPLETE
+12:41:04.296 [SDK-SERVER-BOSS-0] INFO  i.n.handler.logging.LoggingHandler - [id: 0x0c369f4c, L:/0:0:0:0:0:0:0:0:10011] READ: [id: 0x601dee8f, L:/0:0:0:0:0:0:0:1:10011 - R:/0:0:0:0:0:0:0:1:55742]
+12:41:04.301 [SDK-SERVER-BOSS-0] INFO  i.n.handler.logging.LoggingHandler - [id: 0x0c369f4c, L:/0:0:0:0:0:0:0:0:10011] READ COMPLETE
+12:41:59.977 [http-nio-8190-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:41:59.977 [http-nio-8190-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:41:59.993 [http-nio-8190-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+12:48:42.871 [http-nio-8190-exec-9] ERROR c.t.f.s.s.web.aop.AccessJudgementAop - 0:0:0:0:0:0:0:1 personFind [null,null,null] deviceKey 错误
+12:48:42.890 [http-nio-8190-exec-9] ERROR c.t.f.s.s.w.s.CustomExceptionHandler - {"path":"/api/person/find","from":"0:0:0:0:0:0:0:1","message":"deviceKey 错误"}
+ted initialization in 16 ms
+12:48:42.871 [http-nio-8190-exec-9] ERROR c.t.f.s.s.web.aop.AccessJudgementAop - 0:0:0:0:0:0:0:1 personFind [null,null,null] deviceKey 错误
+12:48:42.890 [http-nio-8190-exec-9] ERROR c.t.f.s.s.w.s.CustomExceptionHandler - {"path":"/api/person/find","from":"0:0:0:0:0:0:0:1","message":"deviceKey 错误"}
